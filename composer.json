@@ -1,0 +1,19 @@
+{
+    "name": "fausto/src",
+    "description": "Fpay API module",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fausto Marins",
+            "email": "faustogmjunior@Hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Fgmarins\\Fpay\\": "src/"
+        }
+    },
+    "require": {}
+}
