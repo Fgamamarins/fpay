@@ -1,14 +1,15 @@
 <?php
+declare(strict_types=1);
 
 namespace Fgmarins\Fpay\Http\Controllers;
 
 use Exception;
+use Fgmarins\Fpay\Services\FpayService\Api;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
-use Modules\Fpay\Services\FpayService\Api;
 
 /**
  * Class FpayController

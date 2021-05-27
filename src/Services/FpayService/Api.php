@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Fgmarins\Fpay\Services\FpayService;
 
@@ -53,25 +54,21 @@ class Api
      */
     public function getSale(array $params)
     {
-        try {
-            $request_headers = [
-                "Client-Code: " . $this->clientCode,
-                "Client-Key: " . $this->clientKey,
-            ];
+        $request_headers = [
+            "Client-Code: " . $this->clientCode,
+            "Client-Key: " . $this->clientKey,
+        ];
 
-            $this->url .= '?' . http_build_query($params);
+        $this->url .= '?' . http_build_query($params);
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $this->url);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $request_headers);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            $result = curl_exec($ch);
-            curl_close($ch);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $this->url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $request_headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $result = curl_exec($ch);
+        curl_close($ch);
 
-            return json_decode($result, true);
-        } catch (Exception $ex) {
-            throw $ex;
-        }
+        return json_decode($result, true);
     }
 
     /**

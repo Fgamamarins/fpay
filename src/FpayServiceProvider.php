@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * Class FpayServiceProvider
  * @package Fgmarins\Fpay
+ * @codeCoverageIgnore
  */
 class FpayServiceProvider extends ServiceProvider
 {

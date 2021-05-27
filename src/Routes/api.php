@@ -17,7 +17,9 @@
 */
 
 use Fgmarins\Fpay\Http\Controllers\FpayController;
+use Illuminate\Support\Facades\Route;
 
+// @codeCoverageIgnoreStart
 Route::group(['prefix' => 'api/v1'], function() {
     Route::group(['prefix' => 'fpay'], function() {
         Route::get('/sales', [FpayController::class, 'getSales']);
@@ -25,3 +27,4 @@ Route::group(['prefix' => 'api/v1'], function() {
         Route::get('/installments', [FpayController::class, 'getAllSalesInstallments']);
     });
 });
+// @codeCoverageIgnoreEnd
