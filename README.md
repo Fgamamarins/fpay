@@ -38,6 +38,8 @@ per_page - (Integer)
 dt_venda - (Date | YYYY-mm-dd)
 ```
 
+Obs: Os parâmetros so opcionais.
+
 ## Rotas de teste no Postman (collection)
 
 Para importar as rotas de teste criadas basta abrir o **Postman** acessar ```File > Import > Raw Text``` no menu superior e adicionar o seguinte texto:
