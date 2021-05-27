@@ -10,13 +10,11 @@ use Illuminate\Support\ServiceProvider;
  */
 class FpayServiceProvider extends ServiceProvider
 {
-    public function boot()
+    /**
+     * @return void
+     */
+    public function boot(): void
     {
-        // MyVendor\contactform\src\ContactFormServiceProvider.php
         $this->loadRoutesFrom(__DIR__ . '/Routes/api.php');
-    }
-
-    public function register()
-    {
     }
 }

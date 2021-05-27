@@ -16,8 +16,6 @@ use Modules\Fpay\Services\FpayService\Api;
  */
 class FpayController
 {
-    const CLIENT_CODE = "FC-SB-15";
-    const CLIENT_KEY  = "6ea297bc5e294666f6738e1d48fa63d2";
     /**
      * @var Api
      */
@@ -30,8 +28,8 @@ class FpayController
     public function __construct(Api $fpayService)
     {
         $this->fpayService = $fpayService;
-        $this->fpayService->setClientCode(self::CLIENT_CODE);
-        $this->fpayService->setClientKey(self::CLIENT_KEY);
+        $this->fpayService->setClientCode(env("CLIENT_CODE"));
+        $this->fpayService->setClientKey(env("CLIENT_KEY"));
     }
 
     /**

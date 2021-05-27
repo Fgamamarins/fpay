@@ -1,8 +1,9 @@
 {
-    "name": "fausto/src",
+    "name": "fausto/fpay-module",
     "description": "Fpay API module",
     "type": "project",
     "license": "MIT",
+    "version": "1.0",
     "authors": [
         {
             "name": "Fausto Marins",
